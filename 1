@@ -1,0 +1,49 @@
+a1=input("enter name=")
+a3=input("enter designation=")
+a4=int(input("overtime="))
+print("1=january,march,may,july,august,october,december")
+print("2=february")
+print("3=april,june,september,november")
+x=int(input("select month="))
+a2=int(input("number of days present="))
+
+
+d1="manager"
+d2="team leader"
+d3="team member"
+
+s1=a2*2000
+s2=a2*1800
+s3=a2*1500
+
+o1=(a4//2)*2000
+o2=(a4//2)*1800
+o3=(a4//2)*1500
+
+
+
+if a2>31:
+  print("invalid")
+elif x==1&a2>31:
+  print("invalid")
+elif x==2 & a2>=30:
+  print("invalid")
+elif x==3&a2>30:
+  print("invalid")
+
+elif a4 == 0:
+  if a3==d1:
+    print("salary=",s1)
+  elif a3==d2:
+    print("saary=",s2)
+  elif a3==d3:
+    print("salary=",s3)
+  else:
+    print("wrong designation")
+else:
+  if a3==d1:
+    print("salary=",s1+o1)
+  elif a3==d2:
+    print("salary=",s2+o2)
+  else:
+    print("salary=",s3+o3)
